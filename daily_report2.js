@@ -14,7 +14,6 @@
 })
 (function ($) {
   var dailyText = "";
-
   $('.L1Ysrb').each(function(oneday) {
     var timeList = [];
     var event = [];
@@ -22,7 +21,7 @@
     $(this).find('.taTyDe').each(function () {
       if ($(this).find('.vXnnM').text().indexOf('～') != -1) {
         var time = $(this).find('.vXnnM').text().split('～');
-        if (new Date('2017-1-1 ' + time[0]).getTime() >= new Date('2017-1-1 9:30').getTime() && new Date('2017-1-1 ' + time[1]).getTime() <= new Date('2017-1-1 20:00').getTime()) {
+        if (new Date('2017-1-1 ' + time[0]).getTime() >= new Date('2017-1-1 9:30').getTime() && new Date('2017-1-1 ' + time[1]).getTime() <= new Date('2017-1-1 20:00').getTime() && new Date('2017-1-1 ' + time[1]).getTime() >= new Date('2017-1-1 9:30').getTime()) {
           timeList.push($(this).find('.vXnnM').text());
           event.push($(this).find('.NlL62b').text());
         }
